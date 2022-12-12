@@ -40,6 +40,7 @@ stampa un messaggio appropriato sull’esito del controllo.
 // prendo gli elementi nel dom
 const userMali = document.getElementById('user-mail');
 const button = document.getElementById('send');
+const acsess = document.getElementById('acsess');
 //creo un aray con una lista di email
 const validEmail = ['ciccio@gmail.com', 'pippo@gmail.com', 'franco@gmail.com'];
 
@@ -48,9 +49,17 @@ button.addEventListener("click" , function(){
     const emailElement = userMali.value.trim()
     //console.log(emailElement)
     
+    let flag = false;
    for(let i = 0; i < validEmail.length; i++ ){
     
     if(emailElement === validEmail[i])
-    console.log('ciao')
+    //console.log('ciao')
+    flag = true;
    };
+
+   if(flag === true){
+    acsess.innerText = 'accesso acconsentito'
+   }else{
+    acsess.innerText = 'accesso negato'
+   }
 });
