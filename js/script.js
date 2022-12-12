@@ -6,14 +6,14 @@ Stampiamo in pagina i due tiri e il risultato
 */
 
 // prendo l'elemento in padina 
-const dice = document.getElementById('dice-game')
-const winer = document.getElementById('winer')
+const dice = document.getElementById('dice-game');
+const winer = document.getElementById('winer');
 
 // 1 creo delle variabili per il giocatore e la cpu generando dei numeri random da 1 a 6
-const player =  Math.floor(Math.random() * 6) + 1
+const player =  Math.floor(Math.random() * 6) + 1;
 console.log(player) 
-const cpu =  Math.floor(Math.random() * 6) + 1
-console.log(cpu)
+const cpu =  Math.floor(Math.random() * 6) + 1;
+console.log(cpu);
 
 //stampo in pagina i due risultati 
 
@@ -27,3 +27,25 @@ if(cpu > player){
 }else{
     winer.innerHTML = `<h5>E un pareggio</h5>`
 }
+
+// ! esercizzio 2 ---------------------------------------------------------------------------------
+
+/*
+Inventa una lista di email autorizzate
+Chiedi all’utente la sua email, con un piccolo form.
+controlla che sia nella lista di chi può accedere,
+stampa un messaggio appropriato sull’esito del controllo.
+*/
+
+// prendo gli elementi nel dom
+const userMali = document.getElementById('user-mail');
+const button = document.getElementById('send');
+//creo un aray con una lista di email
+const validEmail = ['ciccio@gmail.com', 'pippo@gmail.com', 'franco@gmail.com'];
+
+// al click del bottone prendo il value di userMail 
+button.addEventListener("click" , function(){
+    const emailElement = userMali.value.trim()
+    
+    console.log(emailElement)
+});
