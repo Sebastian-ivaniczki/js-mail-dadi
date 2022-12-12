@@ -46,6 +46,11 @@ const validEmail = ['ciccio@gmail.com', 'pippo@gmail.com', 'franco@gmail.com'];
 // al click del bottone prendo il value di userMail 
 button.addEventListener("click" , function(){
     const emailElement = userMali.value.trim()
+    //console.log(emailElement)
     
-    console.log(emailElement)
+   for(let i = 0; i < validEmail.length; i++ ){
+    
+    if(emailElement === validEmail[i])
+    console.log('ciao')
+   };
 });
